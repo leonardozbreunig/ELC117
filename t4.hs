@@ -15,8 +15,10 @@ semVogais [] = []
 semVogais (x:xs) = if (x=='a')||(x=='e')||(x=='i')||(x=='o')||(x=='u')||(x=='A')||(x=='E')||(x=='I')||(x=='O')||(x=='U') then (semVogais xs) else x:(semVogais xs)
 
 --Exercicio 4
-translate :: (Int,Int)-> (Int,Int)
-translate (x,y) = (x+2,y+2)
+translate :: [(Double,Double)] -> [(Double,Double)]
+translate [] = []
+translate ((x,y):xs) = (x+2,y+2) : translate xs
+
 
 --Exercicio 5
 geraTabela' :: Int -> [(Int,Int)]
