@@ -1,3 +1,4 @@
+
 import Text.Printf
 
 type Point     = (Float,Float)
