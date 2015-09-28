@@ -36,8 +36,8 @@ mesmaposicao(A,[H1|T1],[H2|T2]) :- A == H1, A == H2.
 mesmaposicao(A,[H1|T1],[H2|T2]) :- A \== H1, A \== H2, mesmaposicao(A,T1,T2).
 
 %7
-intercala(_,[],[]).
-intercala(_,T,T) :- length(T,L),L=1.
+intercala(_,[],[]):-!.
+intercala(_,T,T) :- length(T,L),L=1,!.
 intercala(A,[H1|T1],[H1,A|T]) :- intercala(A,T1,T).
 
 %8
