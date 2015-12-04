@@ -105,10 +105,10 @@ public class Tabela extends AbstractTableModel  {
          case 1: return p.getRazao_social();
          case 2: return p.getNome_fantasia();
          case 3: return p.getBandeira();
-         case 4: return p.getEndereço().getRua();
-         case 5: return p.getEndereço().getNumero();
-         case 6: return p.getEndereço().getBairro();
-         case 7: return p.getEndereço().getCep();
+         case 4: return p.getRua();
+         case 5: return p.getNumero();
+         case 6: return p.getBairro();
+         case 7: return p.getCep();
       }
       return null;
    }

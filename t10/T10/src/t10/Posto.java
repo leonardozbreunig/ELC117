@@ -1,6 +1,7 @@
 package t10;
 
 import java.util.ArrayList;
+import t10.Combustivel;
 
 
 public class Posto {
@@ -8,18 +9,66 @@ public class Posto {
     private String razao_social;
     private String nome_fantasia;
     private String bandeira;
-    private Endereço endereço;
+    private String rua;
+    private String numero;
+    private String bairro;
+    private String cep;
+    private String imagem;
     private ArrayList <Combustivel> combustivel;
     
-    public Posto(){
+        public Posto(){
     }
     
-    public Posto(String cnpj, String razao_social, String nome_fantasia, String bandeira, Endereço endereço){
+    public Posto(String cnpj, String razao_social, String nome_fantasia, String bandeira, String rua, String numero, String bairro, String cep, String imagem){
         this.cnpj = cnpj;
         this.razao_social = razao_social;
         this.nome_fantasia = nome_fantasia;
         this.bandeira = bandeira;
-        this.endereço = endereço;
+        this.rua = rua;
+        this.numero = numero;
+        this.bairro = bairro;
+        this.cep = cep;
+        this.imagem = imagem;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
     
     public void AddCombustivel(Combustivel combustivel){
@@ -60,13 +109,5 @@ public class Posto {
 
     public void setBandeira(String bandeira) {
         this.bandeira = bandeira;
-    }
-
-    public Endereço getEndereço() {
-        return endereço;
-    }
-
-    public void setEndereço(Endereço endereço) {
-        this.endereço = endereço;
     }
 }
